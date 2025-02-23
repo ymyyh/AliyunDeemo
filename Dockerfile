@@ -9,7 +9,7 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -B
 
 # 复制源代码
-COPY src ./src
+COPY baseProject/src /app/src
 
 # 构建项目
 RUN mvn package -DskipTests
