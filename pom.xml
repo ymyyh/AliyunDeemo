@@ -51,9 +51,14 @@
     </build>
 
     <!-- 模块管理（如果是多模块项目） -->
-    <modules>
-        <module>baseProject</module> <!-- 子模块 2 -->
-    </modules>
+    <profiles>
+        <profile>
+            <id>AliyunDeemo</id>
+            <modules>
+                <module>baseProject</module> <!-- 子模块 2 -->
+            </modules>
+        </profile>
+    </profiles>
 
     <distributionManagement>
         <repository>
