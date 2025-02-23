@@ -14,7 +14,7 @@ COPY baseProject/src ./src
 RUN mvn package -DskipTests
 
 # 第二阶段：运行
-FROM eclipse-temurin:21-jre-slim
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=builder /app/target/AliyunDeemo.jar .
 EXPOSE 8080
