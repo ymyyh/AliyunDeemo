@@ -55,7 +55,7 @@
         <profile>
             <id>AliyunDeemo</id>
             <modules>
-                <module>baseProject</module> <!-- 子模块 2 -->
+                <module>./baseProject</module> <!-- 子模块 2 -->
             </modules>
         </profile>
     </profiles>
