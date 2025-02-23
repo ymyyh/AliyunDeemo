@@ -7,7 +7,7 @@
     <!-- 项目基本信息 -->
     <groupId>com.zhn.personalProject</groupId>
     <artifactId>AliyunDeemo</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging> <!-- 父 POM 的 packaging 必须是 pom -->
 
     <!-- 项目名称和描述 -->
