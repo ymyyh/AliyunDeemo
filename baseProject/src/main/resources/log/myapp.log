@@ -1,0 +1,619 @@
+2023-09-18 14:45:49.180  INFO 21880 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21880 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 14:45:49.182  INFO 21880 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 14:45:50.199  INFO 21880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 14:45:50.207  INFO 21880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 14:45:50.207  INFO 21880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 14:45:50.291  INFO 21880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 14:45:50.291  INFO 21880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2023-09-18 14:45:50.410  INFO 21880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 14:45:50.553  INFO 21880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 14:45:50.562  INFO 21880 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.762 seconds (JVM running for 2.229)
+2023-09-18 14:46:02.162  INFO 21880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 14:46:02.162  INFO 21880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 14:46:02.162  INFO 21880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 14:46:02.176  INFO 21880 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 14:46:03.174  INFO 21880 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 14:46:03.997  INFO 21880 --- [http-nio-8080-exec-3] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:08:13.885  INFO 21880 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:23:50.021  INFO 23156 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 23156 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:23:50.037  INFO 23156 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:23:50.681  WARN 23156 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+2023-09-18 15:23:50.688  INFO 23156 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-18 15:23:50.700 ERROR 23156 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]
+	at com.zhn.personalproject.baseproject.BaseProjectApplication.main(BaseProjectApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:617) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159) ~[spring-boot-2.4.1.jar:2.4.1]
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.6.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:337) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:289) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:444) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
+	... 26 common frames omitted
+
+2023-09-18 15:24:08.688  INFO 21312 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21312 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:24:08.690  INFO 21312 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:24:09.705  INFO 21312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 15:24:09.714  INFO 21312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 15:24:09.714  INFO 21312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 15:24:09.794  INFO 21312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 15:24:09.794  INFO 21312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1063 ms
+2023-09-18 15:24:09.908  INFO 21312 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:24:10.050  INFO 21312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 15:24:10.057  INFO 21312 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.702 seconds (JVM running for 2.181)
+2023-09-18 15:24:17.113  INFO 21312 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 15:24:17.113  INFO 21312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 15:24:17.114  INFO 21312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 15:24:17.128  INFO 21312 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:24:17.994  INFO 21312 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:25:11.494  INFO 21312 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:25:14.462  INFO 25724 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 25724 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:25:14.464  INFO 25724 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:25:15.072  WARN 25724 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+2023-09-18 15:25:15.079  INFO 25724 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-18 15:25:15.092 ERROR 25724 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]
+	at com.zhn.personalproject.baseproject.BaseProjectApplication.main(BaseProjectApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:617) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159) ~[spring-boot-2.4.1.jar:2.4.1]
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.zhn.personalproject.baseproject.controller [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.6.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:337) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:289) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:444) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
+	... 26 common frames omitted
+
+2023-09-18 15:27:44.611  INFO 25820 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 25820 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:27:44.613  INFO 25820 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:27:45.676  INFO 25820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 15:27:45.684  INFO 25820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 15:27:45.684  INFO 25820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 15:27:45.764  INFO 25820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 15:27:45.764  INFO 25820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2023-09-18 15:27:45.919  INFO 25820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:27:46.049  INFO 25820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 15:27:46.056  INFO 25820 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.787 seconds (JVM running for 2.211)
+2023-09-18 15:27:51.374  INFO 25820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 15:27:51.375  INFO 25820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 15:27:51.375  INFO 25820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 15:27:51.431  INFO 25820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:27:51.439  INFO 25820 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:27:51.439  INFO 25820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:27:53.191  INFO 25820 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:27:53.191  INFO 25820 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:27:53.191  INFO 25820 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:39:23.963  INFO 25820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:39:27.567  INFO 23824 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 23824 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:39:27.570  INFO 23824 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:39:28.823  INFO 23824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 15:39:28.833  INFO 23824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 15:39:28.833  INFO 23824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 15:39:28.923  INFO 23824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 15:39:28.923  INFO 23824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
+2023-09-18 15:39:29.121  INFO 23824 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:39:29.273  INFO 23824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 15:39:29.281  INFO 23824 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.194 seconds (JVM running for 2.869)
+2023-09-18 15:39:34.995  INFO 23824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 15:39:34.996  INFO 23824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 15:39:34.996  INFO 23824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 15:39:35.012  INFO 23824 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:39:35.020  INFO 23824 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:39:35.020  INFO 23824 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:39:35.767  INFO 23824 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:39:35.767  INFO 23824 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:39:35.767  INFO 23824 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:39:36.607  INFO 23824 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:39:36.607  INFO 23824 --- [http-nio-8080-exec-3] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:39:36.607  INFO 23824 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:53:20.930  INFO 23824 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:53:24.299  INFO 27280 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 27280 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 15:53:24.302  INFO 27280 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 15:53:25.458  INFO 27280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 15:53:25.466  INFO 27280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 15:53:25.466  INFO 27280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 15:53:25.535  INFO 27280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 15:53:25.535  INFO 27280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1184 ms
+2023-09-18 15:53:25.711  INFO 27280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 15:53:25.864  INFO 27280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 15:53:25.873  INFO 27280 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.043 seconds (JVM running for 2.591)
+2023-09-18 15:53:37.139  INFO 27280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 15:53:37.139  INFO 27280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 15:53:37.140  INFO 27280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 15:53:37.195  INFO 27280 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:53:37.203  INFO 27280 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:53:37.204  INFO 27280 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:53:37.205 ERROR 27280 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 15:53:38.330  INFO 27280 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:53:38.330  INFO 27280 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:53:38.330  INFO 27280 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:53:38.330 ERROR 27280 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 15:53:39.445  INFO 27280 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 15:53:39.445  INFO 27280 --- [http-nio-8080-exec-3] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 15:53:39.445  INFO 27280 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 15:53:39.445 ERROR 27280 --- [http-nio-8080-exec-3] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 15:53:50.074  INFO 27280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:02:40.327  INFO 21468 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21468 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:02:40.330  INFO 21468 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:02:40.897  WARN 21468 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+2023-09-18 16:02:40.903  INFO 21468 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-18 16:02:40.918 ERROR 21468 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]
+	at com.zhn.personalproject.baseproject.BaseProjectApplication.main(BaseProjectApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159) ~[spring-boot-2.4.1.jar:2.4.1]
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:379) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:309) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:149) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:113) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:213) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:144) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251) ~[spring-aop-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1144) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1119) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-5.3.2.jar:5.3.2]
+	... 16 common frames omitted
+
+2023-09-18 16:06:27.029  INFO 19820 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 19820 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:06:27.032  INFO 19820 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:06:28.153  INFO 19820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:06:28.162  INFO 19820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:06:28.162  INFO 19820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:06:28.229  INFO 19820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:06:28.229  INFO 19820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1154 ms
+2023-09-18 16:06:28.385  INFO 19820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:06:28.526  INFO 19820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:06:28.533  INFO 19820 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.86 seconds (JVM running for 2.277)
+2023-09-18 16:06:32.679  INFO 19820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:06:32.679  INFO 19820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:06:32.680  INFO 19820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:06:32.740  INFO 19820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : before切面方法
+2023-09-18 16:06:32.740  INFO 19820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : a,b
+2023-09-18 16:06:32.748  INFO 19820 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:06:32.749  INFO 19820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:06:32.749 ERROR 19820 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : 在切点方法中出现了异常
+2023-09-18 16:10:49.821  INFO 19820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:10:53.318  INFO 17248 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 17248 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:10:53.322  INFO 17248 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:10:54.573  INFO 17248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:10:54.581  INFO 17248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:10:54.582  INFO 17248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:10:54.649  INFO 17248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:10:54.650  INFO 17248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1275 ms
+2023-09-18 16:10:54.807  INFO 17248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:10:54.951  INFO 17248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:10:54.959  INFO 17248 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.094 seconds (JVM running for 2.615)
+2023-09-18 16:11:39.924  INFO 17248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:11:39.925  INFO 17248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:11:39.925  INFO 17248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 16:11:39.994  INFO 17248 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:11:39.996  INFO 17248 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:11:39.997 ERROR 17248 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:15:25.511  INFO 17248 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:15:28.645  INFO 13444 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 13444 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:15:28.648  INFO 13444 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:15:29.796  INFO 13444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:15:29.804  INFO 13444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:15:29.805  INFO 13444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:15:29.873  INFO 13444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:15:29.873  INFO 13444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1177 ms
+2023-09-18 16:15:30.047  INFO 13444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:15:30.196  INFO 13444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:15:30.204  INFO 13444 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.948 seconds (JVM running for 2.4)
+2023-09-18 16:15:52.384  INFO 13444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:15:52.384  INFO 13444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:15:52.385  INFO 13444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:15:52.447  INFO 13444 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:15:52.448  INFO 13444 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:15:52.449 ERROR 13444 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:15:52.459  WARN 13444 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:16:00.699  INFO 13444 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:16:00.699  INFO 13444 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:16:00.699 ERROR 13444 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:16:00.700  WARN 13444 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:17:07.119  INFO 13444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:17:10.500  INFO 17744 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 17744 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:17:10.502  INFO 17744 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:17:11.660  INFO 17744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:17:11.669  INFO 17744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:17:11.670  INFO 17744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:17:11.751  INFO 17744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:17:11.752  INFO 17744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1200 ms
+2023-09-18 16:17:11.949  INFO 17744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:17:12.100  INFO 17744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:17:12.108  INFO 17744 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.094 seconds (JVM running for 2.652)
+2023-09-18 16:17:22.401  INFO 17744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:17:22.401  INFO 17744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:17:22.402  INFO 17744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:17:22.463  INFO 17744 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:17:22.464  INFO 17744 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:17:22.465 ERROR 17744 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:17:22.475  WARN 17744 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [url:https:/www.baidu.com]
+2023-09-18 16:30:06.911  INFO 17744 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:30:11.058  INFO 27092 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 27092 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:30:11.061  INFO 27092 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:30:12.196  INFO 27092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:30:12.204  INFO 27092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:30:12.205  INFO 27092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:30:12.272  INFO 27092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:30:12.272  INFO 27092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
+2023-09-18 16:30:12.446  INFO 27092 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:30:12.598  INFO 27092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:30:12.608  INFO 27092 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.936 seconds (JVM running for 2.421)
+2023-09-18 16:30:28.534  INFO 27092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:30:28.534  INFO 27092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:30:28.535  INFO 27092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:30:28.603  INFO 27092 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:30:28.604  INFO 27092 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:30:28.606 ERROR 27092 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:30:53.303  INFO 27092 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:30:53.303  INFO 27092 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:30:53.304 ERROR 27092 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:34:22.357  INFO 27092 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:34:25.277  INFO 22996 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 22996 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:34:25.280  INFO 22996 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:34:26.376  INFO 22996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:34:26.383  INFO 22996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:34:26.384  INFO 22996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:34:26.452  INFO 22996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:34:26.453  INFO 22996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+2023-09-18 16:34:26.611  INFO 22996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:34:26.760  INFO 22996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:34:26.768  INFO 22996 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.805 seconds (JVM running for 2.196)
+2023-09-18 16:34:39.579  INFO 22996 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:34:43.422  INFO 25200 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 25200 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:34:43.425  INFO 25200 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:34:44.602  INFO 25200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:34:44.610  INFO 25200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:34:44.610  INFO 25200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:34:44.691  INFO 25200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:34:44.691  INFO 25200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2023-09-18 16:34:44.875  INFO 25200 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:34:45.028  INFO 25200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:34:45.037  INFO 25200 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.135 seconds (JVM running for 2.664)
+2023-09-18 16:34:58.510  INFO 25200 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:34:58.510  INFO 25200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:34:58.511  INFO 25200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:34:58.580  INFO 25200 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:34:58.581  INFO 25200 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:34:58.583 ERROR 25200 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:34:58.593  WARN 25200 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:35:00.963  INFO 25200 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:35:00.963  INFO 25200 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:35:00.963 ERROR 25200 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 16:35:00.964  WARN 25200 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:35:09.987  INFO 25200 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:35:14.235  INFO 21816 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21816 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:35:14.238  INFO 21816 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:35:15.446  INFO 21816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:35:15.456  INFO 21816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:35:15.456  INFO 21816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:35:15.540  INFO 21816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:35:15.540  INFO 21816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1253 ms
+2023-09-18 16:35:15.750  INFO 21816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:35:15.936  INFO 21816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:35:15.947  INFO 21816 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.114 seconds (JVM running for 2.629)
+2023-09-18 16:35:20.641  INFO 21816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:35:20.642  INFO 21816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:35:20.642  INFO 21816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 16:35:20.712  INFO 21816 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:35:20.714  INFO 21816 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:35:20.725  WARN 21816 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:35:46.850  INFO 21816 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:35:49.911  INFO 24464 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 24464 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:35:49.915  INFO 24464 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:35:51.065  INFO 24464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:35:51.073  INFO 24464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:35:51.074  INFO 24464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:35:51.141  INFO 24464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:35:51.142  INFO 24464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1181 ms
+2023-09-18 16:35:51.316  INFO 24464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:35:51.460  INFO 24464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:35:51.468  INFO 24464 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.933 seconds (JVM running for 2.393)
+2023-09-18 16:35:59.546  INFO 24464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:35:59.546  INFO 24464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:35:59.547  INFO 24464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:35:59.617  INFO 24464 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:35:59.618  INFO 24464 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:35:59.631  WARN 24464 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:37:45.354  INFO 24464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:37:48.456  INFO 5208 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 5208 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:37:48.459  INFO 5208 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:37:49.598  INFO 5208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:37:49.606  INFO 5208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:37:49.607  INFO 5208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:37:49.673  INFO 5208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:37:49.673  INFO 5208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1168 ms
+2023-09-18 16:37:49.852  INFO 5208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:37:50.001  INFO 5208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:37:50.009  INFO 5208 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.956 seconds (JVM running for 2.423)
+2023-09-18 16:37:53.676  INFO 5208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:37:53.677  INFO 5208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:37:53.677  INFO 5208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 16:37:53.747  INFO 5208 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:37:53.749  INFO 5208 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:37:53.760  WARN 5208 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:42:15.032  INFO 5208 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:42:18.475  INFO 14528 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 14528 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:42:18.479  INFO 14528 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:42:19.827  INFO 14528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:42:19.839  INFO 14528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:42:19.840  INFO 14528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:42:19.934  INFO 14528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:42:19.934  INFO 14528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
+2023-09-18 16:42:20.156  INFO 14528 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:42:20.356  INFO 14528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:42:20.367  INFO 14528 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.334 seconds (JVM running for 2.87)
+2023-09-18 16:42:24.534  INFO 14528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:42:24.534  INFO 14528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:42:24.535  INFO 14528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:42:24.606  INFO 14528 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:42:24.608  INFO 14528 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:42:24.620  WARN 14528 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 16:43:46.165  INFO 14528 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:43:49.564  INFO 21348 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21348 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 16:43:49.567  INFO 21348 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 16:43:50.832  INFO 21348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 16:43:50.842  INFO 21348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 16:43:50.842  INFO 21348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 16:43:50.923  INFO 21348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 16:43:50.923  INFO 21348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1300 ms
+2023-09-18 16:43:51.129  INFO 21348 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 16:43:51.292  INFO 21348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 16:43:51.302  INFO 21348 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.187 seconds (JVM running for 2.705)
+2023-09-18 16:43:54.062  INFO 21348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 16:43:54.062  INFO 21348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 16:43:54.063  INFO 21348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 16:43:54.136  INFO 21348 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:43:54.138  INFO 21348 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 16:44:16.803  INFO 21348 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 16:44:16.803  INFO 21348 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:00:59.133  INFO 21348 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:01:03.039  INFO 16388 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 16388 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:01:03.043  INFO 16388 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:01:04.433  INFO 16388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:01:04.442  INFO 16388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:01:04.443  INFO 16388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:01:04.530  INFO 16388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:01:04.530  INFO 16388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
+2023-09-18 17:01:04.794  INFO 16388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:01:04.997  INFO 16388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:01:05.012  INFO 16388 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.512 seconds (JVM running for 3.228)
+2023-09-18 17:01:14.134  INFO 16388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:01:14.134  INFO 16388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:01:14.135  INFO 16388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 17:01:14.206  INFO 16388 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:01:14.207  INFO 16388 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:01:14.208 ERROR 16388 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:01:14.220  WARN 16388 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:01:18.125  INFO 16388 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:01:18.126  INFO 16388 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:01:18.126 ERROR 16388 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:01:18.128  WARN 16388 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:02:01.557  INFO 16388 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:02:05.562  INFO 28240 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 28240 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:02:05.565  INFO 28240 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:02:06.693  INFO 28240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:02:06.701  INFO 28240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:02:06.702  INFO 28240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:02:06.784  INFO 28240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:02:06.784  INFO 28240 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1173 ms
+2023-09-18 17:02:06.972  INFO 28240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:02:07.119  INFO 28240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:02:07.127  INFO 28240 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.946 seconds (JVM running for 2.387)
+2023-09-18 17:02:11.229  INFO 28240 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:02:11.229  INFO 28240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:02:11.230  INFO 28240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 17:02:11.291  INFO 28240 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:02:11.292  INFO 28240 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:02:11.293 ERROR 28240 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:02:11.303  WARN 28240 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:02:14.192  INFO 28240 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:02:14.192  INFO 28240 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:02:14.193 ERROR 28240 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:02:14.194  WARN 28240 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:06:34.318  INFO 28240 --- [http-nio-8080-exec-5] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:06:34.318  INFO 28240 --- [http-nio-8080-exec-5] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:06:34.318 ERROR 28240 --- [http-nio-8080-exec-5] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:06:34.319  WARN 28240 --- [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:06:35.549  INFO 28240 --- [http-nio-8080-exec-6] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:06:35.549  INFO 28240 --- [http-nio-8080-exec-6] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:06:35.550 ERROR 28240 --- [http-nio-8080-exec-6] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:06:35.550  WARN 28240 --- [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:06:48.860  INFO 28240 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:06:53.112  INFO 21404 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21404 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:06:53.115  INFO 21404 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:06:54.379  INFO 21404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:06:54.388  INFO 21404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:06:54.388  INFO 21404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:06:54.465  INFO 21404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:06:54.465  INFO 21404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
+2023-09-18 17:06:54.647  INFO 21404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:06:54.787  INFO 21404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:06:54.795  INFO 21404 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.096 seconds (JVM running for 2.529)
+2023-09-18 17:06:58.571  INFO 21404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:06:58.572  INFO 21404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:06:58.572  INFO 21404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 17:06:58.636  INFO 21404 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:06:58.637  INFO 21404 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:06:58.638 ERROR 21404 --- [http-nio-8080-exec-1] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:06:58.648  WARN 21404 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [url:https:/www.baidu.com]
+2023-09-18 17:06:59.701  INFO 21404 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:06:59.701  INFO 21404 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:06:59.701 ERROR 21404 --- [http-nio-8080-exec-2] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:06:59.702  WARN 21404 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [url:https:/www.baidu.com]
+2023-09-18 17:07:00.494  INFO 21404 --- [http-nio-8080-exec-3] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:07:00.494  INFO 21404 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:07:00.494 ERROR 21404 --- [http-nio-8080-exec-3] c.z.P.b.util.GlobalExceptionHandler      : 这是一个除零异常
+2023-09-18 17:07:00.495  WARN 21404 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [url:https:/www.baidu.com]
+2023-09-18 17:09:43.282  INFO 21404 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:09:46.953  INFO 2588 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 2588 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:09:46.957  INFO 2588 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:09:48.249  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:09:48.258  INFO 2588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:09:48.259  INFO 2588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:09:48.345  INFO 2588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:09:48.345  INFO 2588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1331 ms
+2023-09-18 17:09:48.538  INFO 2588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:09:48.676  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:09:48.684  INFO 2588 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.254 seconds (JVM running for 2.917)
+2023-09-18 17:10:27.048  INFO 2588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:10:31.210  INFO 27768 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 27768 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:10:31.214  INFO 27768 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:10:32.406  INFO 27768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:10:32.415  INFO 27768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:10:32.415  INFO 27768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:10:32.484  INFO 27768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:10:32.484  INFO 27768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1222 ms
+2023-09-18 17:10:32.675  INFO 27768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:10:32.830  INFO 27768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:10:32.839  INFO 27768 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.013 seconds (JVM running for 2.513)
+2023-09-18 17:10:39.799  INFO 27768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:10:39.800  INFO 27768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:10:39.800  INFO 27768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-18 17:10:39.866  INFO 27768 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:10:39.867  INFO 27768 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:10:41.889  INFO 27768 --- [http-nio-8080-exec-2] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:10:41.889  INFO 27768 --- [http-nio-8080-exec-2] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:10:50.165  INFO 27768 --- [http-nio-8080-exec-3] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:10:50.165  INFO 27768 --- [http-nio-8080-exec-3] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:11:06.474  INFO 27768 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:11:09.609  INFO 21024 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 21024 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:11:09.612  INFO 21024 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:11:10.805  INFO 21024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:11:10.813  INFO 21024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:11:10.813  INFO 21024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:11:10.882  INFO 21024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:11:10.882  INFO 21024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1223 ms
+2023-09-18 17:11:11.061  INFO 21024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:11:11.207  INFO 21024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:11:11.216  INFO 21024 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 1.993 seconds (JVM running for 2.484)
+2023-09-18 17:11:17.521  INFO 21024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:11:17.521  INFO 21024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:11:17.522  INFO 21024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 17:11:17.597  INFO 21024 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:11:17.598  INFO 21024 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:11:17.611  WARN 21024 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/www.baidu.com]
+2023-09-18 17:11:32.619  INFO 21024 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:11:35.748  INFO 26960 --- [main] c.z.P.b.BaseProjectApplication           : Starting BaseProjectApplication using Java 1.8.0_302 on LPT018254 with PID 26960 (D:\MyDocument\personalProject\webProjectZHN\target\classes started by hnzheng in D:\MyDocument\personalProject\webProjectZHN)
+2023-09-18 17:11:35.751  INFO 26960 --- [main] c.z.P.b.BaseProjectApplication           : No active profile set, falling back to default profiles: default
+2023-09-18 17:11:36.971  INFO 26960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-18 17:11:36.980  INFO 26960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-18 17:11:36.980  INFO 26960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-09-18 17:11:37.048  INFO 26960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-18 17:11:37.048  INFO 26960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1238 ms
+2023-09-18 17:11:37.233  INFO 26960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-18 17:11:37.389  INFO 26960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-18 17:11:37.397  INFO 26960 --- [main] c.z.P.b.BaseProjectApplication           : Started BaseProjectApplication in 2.055 seconds (JVM running for 2.575)
+2023-09-18 17:11:43.435  INFO 26960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-18 17:11:43.435  INFO 26960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-18 17:11:43.436  INFO 26960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-18 17:11:43.500  INFO 26960 --- [http-nio-8080-exec-1] c.z.P.b.controller.MyController          : Hello, logging!
+2023-09-18 17:11:43.501  INFO 26960 --- [http-nio-8080-exec-1] c.z.P.baseProject.aop.ControllerAspect   : after切面方法
+2023-09-18 17:11:50.790  INFO 26960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
