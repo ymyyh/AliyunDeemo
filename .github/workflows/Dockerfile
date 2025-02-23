@@ -18,4 +18,4 @@ RUN mvn package -DskipTests
 EXPOSE 8080
 
 # 设置启动命令
-CMD ["java", "-jar", "target/your-application.jar"]
+CMD ["java", "-jar", "target/AliyunDeemo.jar"]
