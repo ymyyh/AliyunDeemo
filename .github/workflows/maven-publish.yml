@@ -30,7 +30,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           server-id: github
-          settings-path: ${{ github.workspace }}/.m2
+          settings-path: ${{ github.workspace }}/.github/settings.xml
 
       # 4. 登录到 Docker 注册表（以 Docker Hub 为例）
       - name: Log in to Docker Hub
@@ -44,7 +44,7 @@ jobs:
         run: mvn -B -X package --file pom.xml
 
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn -X deploy -s ${{ github.workspace }}/.m2/settings.xml
+        run: mvn -X deploy -s ${{ github.workspace }}/.github/settings.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
