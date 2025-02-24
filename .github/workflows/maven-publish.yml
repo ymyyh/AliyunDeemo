@@ -30,7 +30,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           server-id: github
-          settings-path: ${{ github.workspace }}/.github/settings.xml
+          settings-path: ${{ github.workspace }}/.github
 
       # 4. 登录到 Docker 注册表（以 Docker Hub 为例）
       - name: Log in to Docker Hub
