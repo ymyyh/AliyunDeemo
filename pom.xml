@@ -61,7 +61,7 @@
         <repository>
             <id>github</id>
             <name>GitHub ymyyh Apache Maven Packages</name>
-            <url>https://github.com/ymyyh/AliyunDeemo/packages</url>
+            <url>https://maven.pkg.github.com/ymyyh/AliyunDeemo</url>
             <releases><enabled>true</enabled></releases>
             <snapshots><enabled>true</enabled></snapshots>
         </repository>
