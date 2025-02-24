@@ -16,19 +16,20 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           server-id: ossrh
-          server-username: ${{ secrets.ALIYUN_DEEMO_USERNAME }}
-          server-password: ${{ secrets.ALIYUN_DEEMO_PAT }}
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+
+      - name: Publish to the Maven Central Repository
+        run: mvn --batch-mode deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.ALIYUN_DEEMO_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.ALIYUN_DEEMO_PAT }}
 
       - name: Set up Java for publishing to GitHub Packages
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-
-      - name: Publish to GitHub Packages
-        run: mvn --batch-mode deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.ALIYUN_DEEMO_PAT }}
 
       # 4. 登录到 Docker 注册表（以 Docker Hub 为例）
       - name: Log in to Docker Hub
