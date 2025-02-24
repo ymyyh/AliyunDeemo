@@ -38,13 +38,12 @@ jobs:
           mkdir -p $GITHUB_WORKSPACE/.m2
           cat << EOF > $GITHUB_WORKSPACE/.m2/settings.xml
           <settings>
-            <servers>
+              <!-- 配置私有仓库服务器（例如 com.zhn.personalProject:AliyunDeemo） -->
               <server>
                 <id>github</id>
-                <username>${{ github.actor }}</username>
-                <password>${{ secrets.GITHUB_TOKEN }}</password>
+                <username>${{ secrets.ALIYUN_DEEMO_USERNAME }}</username>
+                <password>${{ secrets.ALIYUN_DEEMO_PAT }}</password>
               </server>
-            </servers>
           </settings>
           EOF
 
