@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.zhn.personalProject</groupId>
         <artifactId>AliyunDeemo</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>baseProject</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>baseProject</name>
     <description>baseProject</description>
 
