@@ -30,13 +30,6 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
-
     <!-- 构建配置 -->
     <build>
         <plugins>
@@ -55,14 +48,6 @@
     <modules>
         <module>./baseProject</module> <!-- 子模块 2 -->
     </modules>
-
-
-    <repositories>
-        <repository>
-            <id>aliyun-deemo-repo</id>
-            <url>https://maven.pkg.github.com/ymyyh/AliyunDeemo</url>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <repository>
