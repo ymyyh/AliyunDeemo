@@ -15,9 +15,11 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      # 验证 POM.xml 存在
-      - name: Verify POM.xml exists
-        run: ls -la .
+      # 验证项目结构
+      - name: Verify project structure
+        run: |
+          ls -la
+          ls -la ./baseProject
 
       - name: Publish to GitHub Packages
         run: mvn --batch-mode deploy
