@@ -1,7 +1,8 @@
 name: Publish package to the Maven Central Repository and GitHub Packages
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -9,6 +10,17 @@ jobs:
       contents: read
       packages: write
     steps:
+      # 1. 检出代码
+      - uses: actions/checkout@v3
+
+      # 2. 缓存 Maven 包以加快构建速度
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
       - name: Set up Java for publishing to GitHub Packages
         uses: actions/setup-java@v4
         with:
