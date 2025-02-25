@@ -18,8 +18,8 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # 从构建阶段复制生成的 JAR 文件
-COPY --from=builder /app/baseProject/target/baseProject-0.0.2.jar .
+COPY --from=builder /app/baseProject/target/baseProject-0.0.4.jar .
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "AliyunDeemo.jar"]
+CMD ["java", "-jar", "baseProject-0.0.4.jar"]
