@@ -1,8 +1,7 @@
 name: Publish package to the Maven Central Repository and GitHub Packages
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -10,29 +9,27 @@ jobs:
       contents: read
       packages: write
     steps:
-      # 1. 检出代码
-      - uses: actions/checkout@v3
-
-      # 2. 缓存 Maven 包以加快构建速度
-      - name: Cache Maven packages
-        uses: actions/cache@v3
+      - uses: actions/checkout@v4
+      - name: Set up Java for publishing to Maven Central Repository
+        uses: actions/setup-java@v4
         with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+          java-version: '21'
+          distribution: 'temurin'
+          server-id: github
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+
+      - name: Publish to the Maven Central Repository
+        run: mvn --batch-mode deploy
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Java for publishing to GitHub Packages
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-          server-id: github
-          settings-path: ${{ github.workspace }}/.github/settings.xml
-
-      - name: Publish to GitHub Packages
-        run: mvn -X deploy -s ${{ github.workspace }}/.github/settings.xml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # 4. 登录到 Docker 注册表（以 Docker Hub 为例）
       - name: Log in to Docker Hub
