@@ -6,7 +6,6 @@
         <groupId>com.zhn.personalProject</groupId>
         <artifactId>AliyunDeemo</artifactId>
         <version>0.0.4</version>
-        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>baseProject</artifactId>
