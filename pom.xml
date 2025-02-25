@@ -46,7 +46,7 @@
     <!-- 模块管理（如果是多模块项目） -->
 
     <modules>
-        <module>baseProject</module> <!-- 子模块 2 -->
+        <module>./baseProject</module> <!-- 子模块 2 -->
     </modules>
 
     <distributionManagement>
@@ -55,5 +55,14 @@
             <url>https://maven.pkg.github.com/ymyyh/AliyunDeemo</url>
         </repository>
     </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>AliyunDeemo</id>
+            <modules>
+                <module>./baseProject</module> <!-- 子模块 2 -->
+            </modules>
+        </profile>
+    </profiles>
 
 </project>
