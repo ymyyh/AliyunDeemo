@@ -15,15 +15,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      # 验证项目结构
-      - name: Verify project structure
-        run: |
-          ls -la
-          ls -la ./baseProject
-
       - name: Publish to GitHub Packages
         run: mvn --batch-mode deploy
-        working-directory: ./baseProject  # 设置正确的工作目录
+        working-directory: ${{ github.workspace }}/baseProject  # 设置正确的工作目录
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
