@@ -31,3 +31,20 @@ jobs:
           context: .
           push: true
           tags: ymyyh/aliyun-deemo:latest
+
+      # login to ACR
+      - name: Login to Aliyun Container Registry (ACR)
+        uses: aliyun/acr-login@v1 # 使用阿里云镜像服务action
+        with:
+          login-server: crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com # 务必正确填写镜像容器服务的登录地址
+          region-id: cn-hangzhou # 务必正确填写镜像容器服务的登录地址
+          username: "${{ secrets.ALIYUN_DOCKER_REGISTER_USERNAME }}" # 引用GitHub repo设置的镜像容器服务用户名
+          password: "${{ secrets.ALIYUN_DOCKER_REGISTER_PASSWORD }}" # 引用GitHub repo设置的镜像容器服务密码
+
+      # build image and push to ACR
+      - name: Build and Push Docker Image to Aliyun Container Registry (ACR)
+        env:
+          IMAGE_TAG: ${{ github.sha }} # 用于标记容器版本号
+        run: |
+          docker build -t crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com/aliyun-deemo/aliyun-deemo:$IMAGE_TAG .
+          docker push crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com/aliyun-deemo/aliyun-deemo:$IMAGE_TAG
