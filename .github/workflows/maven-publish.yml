@@ -14,7 +14,7 @@ jobs:
       CONFIG_DIR: /home/conf/aliyun-deemo # 配置文件路径 // [!code highlight] // [!code focus]
       ACR_DOMAIN: crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com # Docker 镜像仓库域名（ACR 容器镜像服务域名） // [!code highlight] // [!code focus]
       ACR_ZONE: aliyun-deemo # Docker 镜像的命名空间 // [!code highlight] // [!code focus]
-      VERSION: latest # Docker 镜像的版本 // [!code highlight] // [!code focus]
+      VERSION: ${{ github.sha }} # Docker 镜像的版本 // [!code highlight] // [!code focus]
       SHELL_RUN_DIR: /home/run # 运行脚本生成路径 // [!code highlight] // [!code focus]
 
     permissions:
@@ -57,8 +57,8 @@ jobs:
         env:
           IMAGE_TAG: ${{ github.sha }} # 用于标记容器版本号
         run: |
-          docker build -t crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com/aliyun-deemo/aliyun-deemo:$IMAGE_TAG .
-          docker push crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com/aliyun-deemo/aliyun-deemo:$IMAGE_TAG
+          docker build -t ${{ env.ACR_DOMAIN }}/${{ env.ACR_ZONE }}/${{ env.APP_NAME }}:${{ env.VERSION }} .
+          docker push ${{ env.ACR_DOMAIN }}/${{ env.ACR_ZONE }}/${{ env.APP_NAME }}:${{ env.VERSION }}
 
       - name: Deploy to remote server # 部署到远程服务器
         uses: appleboy/ssh-action@v1.2.0
@@ -67,6 +67,16 @@ jobs:
           username: ${{ secrets.ALIYUN_REMOTE_USER }} # SSH 用户名
           password: ${{ secrets.ALIYUN_REMOTE_PASSWORD }} # SSH 密码
           script: |
+            # 创建必要的目录
+            mkdir -p /home/run
+            mkdir -p ${{ env.LOG_DIR }}
+            mkdir -p ${{ env.CONFIG_DIR }}
+        
+            # 设置权限（根据需要调整）
+            chmod 755 /home/run
+            chmod 755 ${{ env.LOG_DIR }}
+            chmod 755 ${{ env.CONFIG_DIR }}
+            
             docker pull  ${{ env.ACR_DOMAIN }}/${{ env.ACR_ZONE }}/${{ env.APP_NAME }}:${{ env.VERSION }}
             
             echo "==================== 生成启动命令脚本 ===================="
