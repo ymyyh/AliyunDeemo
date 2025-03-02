@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        int parseInt = Integer.parseInt("GMT-09:00".substring(3,6));
-        System.out.println(parseInt);
+        Leetcode132 leetcode100540 = new Leetcode132();
+        int[] nums = {-10,3,-1,-2};
+        System.out.println(leetcode100540.minCut("aab"));
     }
 }
