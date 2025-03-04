@@ -52,13 +52,8 @@
         </repository>
     </distributionManagement>
 
-    <profiles>
-        <profile>
-            <id>AliyunDeemo</id>
-            <modules>
-                <module>./baseProject</module> <!-- 子模块 2 -->
-            </modules>
-        </profile>
-    </profiles>
+    <modules>
+        <module>./baseProject</module> <!-- 子模块 2 -->
+    </modules>
 
 </project>

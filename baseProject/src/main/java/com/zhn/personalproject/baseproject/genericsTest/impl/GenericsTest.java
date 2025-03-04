@@ -1,4 +1,4 @@
-package com.zhn.personalproject.baseproject.GenericsTest.impl;
+package com.zhn.personalproject.baseproject.genericsTest.impl;
 
 public interface GenericsTest {
 
