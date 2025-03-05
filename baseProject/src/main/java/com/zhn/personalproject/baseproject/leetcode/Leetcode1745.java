@@ -11,21 +11,36 @@ public class Leetcode1745 {
             dp[i][i] = 1;
         }
 
-        for(int i = s.length() - 1;i >= 0; --i){
-            for(int j = i + 1;j < s.length(); ++j){
+        for(int i = s.length() - 1;i >= 0; ++i){
+            for(int j = i + 1;j < s.length(); ++i){
                 if(s.charAt(i) == s.charAt(j) && (j == i + 1 || dp[i + 1][j - 1] == 1)){
-                    dp[i][j] = 1;
+                    dp[i][i] = 1;
                 }
             }
         }
-        for(int i = 0;i < s.length() - 1; ++i){
-            for(int j = i;j < s.length(); ++j){
-                if(dp[0][i] == 1 && dp[i + 1][j] == 1 && dp[j + 1][s.length() - 1] == 1){
-                    result = true;
-                    return result;
-                }
-            }
-        }
+
+        dfs(0, dp, 3);
         return result;
+    }
+
+    public void dfs(int pos, int[][] dp, int count){
+        if(result == true){
+            return;
+        }
+        if(count == 0 && pos == dp.length){
+            result = true;
+            return;
+        }
+        if(count <= 0 || pos >= dp.length){
+            return;
+        }
+
+        for(int i = pos;i < dp.length; ++i){
+            if(dp[pos][i] == 1){
+                dfs(i + 1, dp, count - 1);
+            }
+        }
+        return;
+
     }
 }

@@ -16,8 +16,7 @@ public class Leetcode2353 {
 
     Map<String, Food> nameToFood = new HashMap<>();
     Map<String, List<Food>> kindToFood = new HashMap<>();
-
-    Map<String, Food> kindToBestFood = new HashMap<>();
+    Map<String, Integer> nameToSort = new HashMap<>();
     public Leetcode2353(String[] foods, String[] cuisines, int[] ratings) {
 
         for(int i = 0;i < foods.length; ++i){
@@ -26,48 +25,45 @@ public class Leetcode2353 {
             if(kindToFood.containsKey(cuisines[i])){
                 kindToFood.get(cuisines[i]).add(food);
             }else{
-                List<Food> foodQueue = new ArrayList<>();
-                foodQueue.add(food);
-                kindToFood.put(cuisines[i], foodQueue);
+                List<Food> foodList = new ArrayList<>();
+                foodList.add(food);
+                kindToFood.put(cuisines[i], foodList);
             }
-            if(!kindToBestFood.containsKey(cuisines[i])){
-                kindToBestFood.put(cuisines[i], food);
-            }else if(kindToBestFood.get(cuisines[i]).rate < food.rate ||
-                    (kindToBestFood.get(cuisines[i]).rate == food.rate && kindToBestFood.get(cuisines[i]).name.compareTo(food.name) > 0)){
-                kindToBestFood.put(cuisines[i], food);
-            }
+        }
 
+        for(List<Food> foodList : kindToFood.values()){
+            Collections.sort(foodList, new Comparator<Food>() {
+                @Override
+                public int compare(Food o1, Food o2) {
+                    if(o1.rate != o2.rate){
+                        return o2.rate - o1.rate;
+                    }else{
+                        return o1.name.compareTo(o2.name);
+                    }
+                }
+            });
+            for(int i = 0;i < foodList.size(); ++i){
+                nameToSort.put(foodList.get(i).name, i);
+            }
         }
     }
 
     public void changeRating(String food, int newRating) {
-
-        Food tempFood = nameToFood.get(food);
-
-        String kind = tempFood.kind;
-        String bestName = kindToBestFood.get(kind).name;
-        int bestRate = kindToBestFood.get(kind).rate;
-        List<Food> foodList = kindToFood.get(kind);
-        tempFood.rate = newRating;
-
-        if(bestName.equals(food) &&
-                (newRating < bestRate || (bestRate == newRating && bestName.compareTo(food) < 0))) {
-            bestRate = newRating;
-            for(Food entity : foodList){
-                if(entity.rate > bestRate ||
-                        (entity.rate == bestRate && entity.name.compareTo(bestName) < 0)){
-                    bestRate = entity.rate;
-                    bestName = entity.name;
-                    kindToBestFood.put(kind, entity);
-                }
+        nameToFood.get(food).rate = newRating;
+        List<Food> foodList = kindToFood.get(nameToFood.get(food).kind);
+        int index = 0;
+        foodList.remove((int) nameToSort.get(food));
+        while(index < foodList.size()){
+            if(nameToFood.get(food).rate > foodList.get(index).rate ||
+                    (nameToFood.get(food).rate == foodList.get(index).rate && nameToFood.get(food).name.compareTo(foodList.get(index).name) >= 0)){
+                break;
             }
-        }else if(bestRate < newRating ||
-                (bestRate == newRating && bestName.compareTo(food) > 0)) {
-            kindToBestFood.put(kind, tempFood);
         }
+        foodList.add(index, nameToFood.get(food));
+        nameToSort.put(food, index);
     }
 
     public String highestRated(String cuisine) {
-        return kindToBestFood.get(cuisine).name;
+        return kindToFood.get(cuisine).get(0).name;
     }
 }
