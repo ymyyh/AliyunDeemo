@@ -22,16 +22,18 @@ public class ControllerAspect {
     }
 
     @Around(value = "execution(* com.zhn.personalproject.baseproject.controller.MyController.*hello*(..))")
-    public void aroundMethod(ProceedingJoinPoint joinPoint){
+    public Object aroundMethod(ProceedingJoinPoint joinPoint){
         logging.info("around切面方法");
         try {
             logging.info(Arrays.stream(joinPoint.getArgs()).map(o -> o.toString()).collect(Collectors.joining(",")));
-            joinPoint.proceed();
+            Object result = joinPoint.proceed();
             logging.info(String.valueOf(joinPoint.getClass()));
+            return result;
         }
         catch (Throwable e){
             logging.error("在切点方法中出现了异常");
         }
+        return null;
     }
 
     @Before(value = "execution(* com.zhn.personalproject.baseproject.controller.MyController.*hello*(..))")
