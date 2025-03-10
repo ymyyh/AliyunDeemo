@@ -7,8 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode132 leetcode100540 = new Leetcode132();
-        int[] nums = {-10,3,-1,-2};
-        System.out.println(leetcode100540.minCut("aab"));
+        Leetcode2597 leetcode = new Leetcode2597();
+        leetcode.beautifulSubsets(new int[]{1,2,3,3}, 1);
     }
 }
