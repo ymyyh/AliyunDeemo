@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode2597 leetcode = new Leetcode2597();
-        leetcode.beautifulSubsets(new int[]{1,2,3,3}, 1);
+        Leetcode2614 leetcode = new Leetcode2614();
+        System.out.println(leetcode.diagonalPrime(new int[][]{{1,2,3},{5,6,7},{9,10,11}}));
     }
 }
