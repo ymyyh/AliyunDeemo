@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode2614 leetcode = new Leetcode2614();
-        System.out.println(leetcode.diagonalPrime(new int[][]{{1,2,3},{5,6,7},{9,10,11}}));
+        Leetcode3306 leetcode = new Leetcode3306();
+        System.out.println(leetcode.countOfSubstrings("ieaouqqieaouqq", 1));
     }
 }
