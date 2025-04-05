@@ -1,6 +1,6 @@
 package com.zhn.personalproject.baseproject.leetcode;
 
-public class Leetcode2873 {
+public class Leetcode2874 {
     public long maximumTripletValue(int[] nums) {
         int[] pre = new int[nums.length];
         int[] post = new int[nums.length];
