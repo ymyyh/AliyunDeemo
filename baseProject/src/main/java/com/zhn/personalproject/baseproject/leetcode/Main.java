@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode033003 leetcode = new Leetcode033003();
-        System.out.println(leetcode.longestPalindrome("axchh", "semjc"));
+        Leetcode0413 leetcode = new Leetcode0413();
+        System.out.println(leetcode.smallestPalindrome("ycnypoidimbrvasctjkkwwkkjtcsavrbmidiopyncy", 32993));
     }
 }
