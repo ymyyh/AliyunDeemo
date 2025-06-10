@@ -49,8 +49,8 @@ jobs:
         with:
           login-server: crpi-eh17ftr3tyc2lrwq.cn-hangzhou.personal.cr.aliyuncs.com # 务必正确填写镜像容器服务的登录地址
           region-id: cn-hangzhou # 务必正确填写镜像容器服务的登录地址
-          username: "${{ secrets.ALIYUN_DOCKER_REGISTER_USERNAME }}" # 引用GitHub repo设置的镜像容器服务用户名
-          password: "${{ secrets.ALIYUN_DOCKER_REGISTER_PASSWORD }}" # 引用GitHub repo设置的镜像容器服务密码
+          username: ${{ secrets.ALIYUN_DOCKER_REGISTER_USERNAME }} # 引用GitHub repo设置的镜像容器服务用户名
+          password: ${{ secrets.ALIYUN_DOCKER_REGISTER_PASSWORD }} # 引用GitHub repo设置的镜像容器服务密码
 
       # build image and push to ACR
       - name: Build and Push Docker Image to Aliyun Container Registry (ACR)
