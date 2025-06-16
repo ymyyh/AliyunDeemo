@@ -1,4 +1,4 @@
-package com.zhn.personalproject.baseproject;
+package com.zhn.personalproject.baseProject;
 
 public class CrossPrint {
     public static volatile Object lock = new Object();

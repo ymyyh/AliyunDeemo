@@ -1,4 +1,4 @@
-package com.zhn.personalproject.baseproject;
+package com.zhn.personalproject.baseProject;
 
 public class DeadLock {
     public static void main(String[] args) {
