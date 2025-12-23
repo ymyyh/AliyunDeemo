@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode3446 leetcode = new Leetcode3446();
-        System.out.println(leetcode.sortMatrix(new int[][]{{1,7,3},{9,8,2},{4,5,6}}));
+        Leetcode2054 leetcode = new Leetcode2054();
+        System.out.println(leetcode.maxTwoEvents(new int[][]{{10,83,53},{63,87,45},{97,100,32},{51,61,16}}));
     }
 }
