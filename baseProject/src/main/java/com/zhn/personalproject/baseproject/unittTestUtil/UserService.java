@@ -1,5 +1,8 @@
-package com.zhn.personalproject.baseproject.testUtil;
+package com.zhn.personalproject.baseproject.unittTestUtil;
 
+import org.springframework.stereotype.Component;
+
+@Component("userServiceForTest")
 public class UserService {
     public boolean hasPermission(User user, String permission) {
         if("admin".equalsIgnoreCase(user.getRole())){

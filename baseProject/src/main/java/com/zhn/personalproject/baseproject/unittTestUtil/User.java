@@ -1,4 +1,6 @@
-package com.zhn.personalproject.baseproject.testUtil;
+package com.zhn.personalproject.baseproject.unittTestUtil;
+
+import org.springframework.stereotype.Component;
 
 public class User {
     String role;
