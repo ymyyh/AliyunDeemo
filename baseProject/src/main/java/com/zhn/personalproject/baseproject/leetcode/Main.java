@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode29 leetcode = new Leetcode29();
-        System.out.println(leetcode.divide(2147483647, 2));
+        Leetcode3719 leetcode = new Leetcode3719();
+        System.out.println(leetcode.longestBalanced(new int[]{2,5,4,3}));
     }
 }
