@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Leetcode0228 leetcode = new Leetcode0228();
-        System.out.println(leetcode.concatenatedBinary(885));
+        Leetcode1861 leetcode = new Leetcode1861();
+        System.out.println(leetcode.rotateTheBox(new char[][]{{'#','#','*','.','*','.'},{'#','#','#','*','.','.'},{'#','#','#','.','#','.'}}));
     }
 }
